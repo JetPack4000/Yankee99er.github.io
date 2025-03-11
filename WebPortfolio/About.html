@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-20">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<style>
+
+</style>
+
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html" class="home">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Projects.html">Projects</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="parallax">
+        <div class="abouttextleft">
+            <p class="introtext">Hey! Look its me! I'm glad you are here. I enjoy a wide variety of hobbies including
+                Pizza making, Sports (of all sorts) hiking, and, of course, Computer Science.</p>
+            <br>
+            <p class="introtext">"Without goals, and plans to reach them, you are like a ship that has set sail with no
+                destination.” — Fitzhugh Dodson</p>
+
+
+
+        </div>
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 5</div>
+                <img src="pictures/image3.jpg" style="width:100%">
+                <div class="captiontext">Pizaolo</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 5</div>
+                <img src="pictures/image2.jpg" style="width:100%">
+                <div class="captiontext">Virginia Beach</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 5</div>
+                <img src="pictures/image1.jpg" style="width:100%">
+                <div class="captiontext">Senior Trip</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 5</div>
+                <img src="pictures/image4.jpg" style="width:100%">
+                <div class="captiontext">Bills Stadium</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">5 / 5</div>
+                <img src="pictures/image6.jpg" style="width:100%">
+                <div class="captiontext">Stream Hiking</div>
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+
+        </div>
+        <br>
+
+
+        <div class="abouttextright">
+            <h3 class="introtext">Some of my Skills include:</h3>
+            <div class="skill-box">
+                <ul>
+                    <li>
+                        Python
+                    </li>
+                    <li>
+                        JavaScript
+                    </li>
+                    <li>
+                        Machine Learning
+                    </li>
+                    <li>
+                        Image Stitching
+                    </li>
+                    <li>
+                        Data Munging
+                    </li>
+                    <li>
+                        Graphic Design
+                    </li>
+                    <li>
+                        Drone Flight
+                    </li>
+                    <li>
+                        General PC Repair
+                    </li>
+                    <li>
+                        Clonezilla
+                    </li>
+                    <li>
+                        Leadership
+                    </li>
+                    <li>
+                        Team encouragement
+                    </li>
+                    <li>
+                        Basic HTML and CSS
+                    </li>
+                    <li>
+                        Web Designing
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <footer>
+        <span><a href="#">Email</a></span>
+        <span><a href="www.linkedin.com/in/samuel-cobb-b448a3292">LinkedIn</a></span>
+    </footer>
+    <script>
+        let slideIndex = 1;
+
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            slides[slideIndex - 1].style.display = "block";
+
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-20">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<style>
+
+</style>
+
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html" class="home">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Projects.html">Projects</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="parallax">
+        <div class="centercontact">
+            <div class="container">
+                <form action="action_page.php" id="myForm">
+                    <span class="error" id="fnameError">Name is required</span>
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                    
+                    <span class="error" id="lnameError">Name is required</span>
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                    
+                    <span class="error" id="emailError">Email is required</span>
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email" placeholder="Your email..">
+                    
+                    <span class="error" id="messageError">Message is required</span>
+                    <label for="subject">Subject</label>
+                    <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
+                    
+
+                    <input type="button" value="Submit" onclick="validateForm()">
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <span><a href="#">Email</a></span>
+        <span><a href="www.linkedin.com/in/samuel-cobb-b448a3292">LinkedIn</a></span>
+    </footer>
+    <script>
+        function validateForm() {
+            let fname = document.getElementById("fname").value.trim();
+            let lname = document.getElementById("lname").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let subject = document.getElementById("email").value.trim();
+            let valid = true;
+
+            // Reset error messages
+            document.getElementById("fnameError").style.display = "none";
+            document.getElementById("lnameError").style.display = "none";
+            document.getElementById("emailError").style.display = "none";
+            document.getElementById("messageError").style.display = "none";
+
+            // Name validation
+            if (lname === "") {
+                document.getElementById("lnameError").style.display = "inline";
+                valid = false;
+            }
+            if (fname === "") {
+                document.getElementById("fnameError").style.display = "inline";
+                valid = false;
+            }
+
+            // Email validation
+            if (email === "") {
+                document.getElementById("emailError").style.display = "inline";
+                valid = false;
+            }
+
+            // Message validation
+            if (email === "") {
+                document.getElementById("messageError").style.display = "inline";
+                valid = false;
+            }
+
+            // If all fields are filled, show success message
+            if (valid) {
+                
+                alert("Form submitted successfully!");
+                document.getElementById("myForm").reset();
+            }
+        }
+    </script>
+</body>
+
+</html>
